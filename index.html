@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milestone 4: Editable Resume</title>
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      #generated-resume {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+        width: 100%;
+      }
+
+      #generated-resume h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+
+      #generated-resume div {
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background-color: #f9f9f9;
+        color: #333;
+        font-size: 18px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+
+      #generated-resume div[contenteditable="true"]:hover {
+        background-color: #eef7ff;
+        border-color: #007bff;
+      }
+
+      #generated-resume div[contenteditable="true"]:focus {
+        background-color: #e6f0ff;
+        border-color: #007bff;
+        outline: none;
+      }
+
+      #generated-resume div[contenteditable="true"]::before {
+        content: "Click to edit";
+        font-size: 12px;
+        font-style: italic;
+        color: #666;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      #generated-resume div[contenteditable="true"]:hover::before {
+        content: "Editing...";
+      }
+
+      #generated-resume div[contenteditable="true"]:focus::before {
+        display: none;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        #generated-resume {
+          padding: 15px;
+        }
+
+        #generated-resume div {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="generated-resume">
+      <h2>Generated Resume</h2>
+      <div id="display-name" contenteditable="true">Name: Mohammad Areeb</div>
+      <div id="display-email" contenteditable="true">
+        Email: areeb777358@gmail.com
+      </div>
+      <div id="display-education" contenteditable="true">
+        Education: BSc In Science
+      </div>
+      <div id="display-work-experience" contenteditable="true">
+        Work Experience: Fresh
+      </div>
+      <div id="display-skills" contenteditable="true">
+        Skills: HTML,CSS.Typescript,Microsoft Ofiice,Adobe Photoshop,Corel
+        Draw,Inpage
+      </div>
+    </section>
+  </body>
+</html>
